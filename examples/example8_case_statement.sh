@@ -1,9 +1,7 @@
 #!/bin/bash
 #
-# Change filename extensions
-# Author: Guillermo Kuster
-
 # Simple function that extract the content of a compressed file
+# Author: Guillermo Kuster
 
 if [ -f $1 ] ; then
     case $1 in
