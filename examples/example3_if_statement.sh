@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 #
 #!/bin/bash -x ----> Using -x option, prints every single value that executes
 #                   It's useful to debug the code
@@ -9,8 +9,7 @@
 #                       ..
 #                       set +x
 
-# Interactive script that creates a note for a specific topic.
-# Run it by excecute ./example2_variables.sh
+# Simple scripting example that shows how to use if statement
 # Author: Guillermo Kuster
 
 # get the date
@@ -24,8 +23,12 @@ filename="${topic}.txt"
 
 
 # Ask user for input
-read "note?Your note: "
+read -p "Your note: " note
 
-echo $date: $note >> "$filename"
-echo "Note saved at $filename"
+if [[ $note ]]; then
+  echo $date: $note >> "$filename"
+  echo "Note saved at $filename"
+else
+  echo "No input; note wasn't saved"
+fi
 
