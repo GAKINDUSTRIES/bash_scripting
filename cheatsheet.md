@@ -311,7 +311,7 @@ fi
 ***
 
 
-## AT and CHRON
+## AT and CRON
 
 #### at now +8 hours -f ~/myscript.sh
   * Schedule a script to run at a certain time (can be combined like echo "tweet fore" | at teatime )
